@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.29)
 
-project(CppTemplate
+project(EXERCISES
     VERSION 0.0.1
     LANGUAGES C CXX
 )
@@ -19,12 +19,7 @@ set(CMAKE_VISIBILITY_INLINES_HIDDEN 1)
 
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 include(ConfigSafeGuards)
-include(Colors)
 include(Warnings)
-include(LTO)
-include(CopyDllsForDebug)
-
-find_lto(CXX)
 
 include(InstallGSL)
 include(InstallFmt)
@@ -33,5 +28,4 @@ include(InstallSpdlog)
 include(InstallDoctest)
 include(InstallPybind11)
 
-add_subdirectory(app)
 add_subdirectory(src)
